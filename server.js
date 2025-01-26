@@ -42,7 +42,7 @@ io.on('connection', (socket)=>{
 
     socket.on('disconnected', ()=>{
         socket.broadcast.emit('leave', {user:"Admin", message:`${users[socket.id]} has left the chat`});
-        console.log("User left the chat");
+        console.log(`${users[socket.id]} has left the chat`);
     })
 
     
